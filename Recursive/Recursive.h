@@ -1,3 +1,4 @@
 #pragma once
 
-int Recursive(int n);
+int Recursive(int workingTime);
+
