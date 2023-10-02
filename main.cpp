@@ -5,31 +5,24 @@ template <typename Type1>
 
 
 //一般にはTypeがTで表記される
-Type1 Add(Type1 number1, Type1 number2) {
-	//static_castは消してね
-	return (number1 + number2);
+//Typeで分かりやすくしよう
+Type1 Min(Type1 number1, Type1 number2) {
+	
+	if (number1 < number2) {
+		return number1;
+	}
+	if (number2 < number1) {
+		return number2;
+	}
+
 }
-
-
-//floatのときだけ減算したい
-//そんな時はテンプレートの特殊化(オーバーライド)
-
-//ここで解除するよ
 
 template <>
-
-float Add<float>(float number1, float number2) {
-	return (number1 - number2);
+char Min<char>(char char1,char char2){
+	printf("数字以外は代入できません");
+	return 0;
 }
 
-
-//何かオーバーライドはmain.cppでやらないとダメだった
-//なんかここに書くの嫌っす
-
-
-float Add(float number1, float number2) {
-	return number1 * number2;
-}
 
 
 
@@ -39,13 +32,10 @@ int main() {
 	//関数テンプレートの使い方
 	//関数名<型>(引数)
 	//%の後ろ気を付けてね
-	printf("%d\n", Add<int>(5, 12));
-	printf("%f\n", Add<float>(0.5f, 1.2f));
-	printf("%f\n", Add(0.5f, 0.12f));
-
-	//もちろん小数点以下は切り捨てで6になるはず
-	//大丈夫でした
-	//printf("%d\n", Add<int, float>(5, 1.2f));
+	printf("%d\n", Min<int>(12, 5));
+	printf("%f\n", Min<float>(0.5f, 1.2f));
+	printf("%lf\n", Min<double>(0.00005, 0.0000012));
+	printf("%c\n", Min("文字１","文字２"));
 
 
 	return 0;
