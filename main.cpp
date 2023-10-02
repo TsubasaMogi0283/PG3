@@ -1,6 +1,5 @@
 ﻿#include <stdio.h>
 
-#include "Add/Add.h"
 template <typename Type1>
 
 
@@ -18,11 +17,13 @@ Type1 Min(Type1 number1, Type1 number2) {
 }
 
 template <>
+
+
 char Min<char>(char char1,char char2){
+	
 	printf("数字以外は代入できません");
 	return 0;
 }
-
 
 
 
@@ -35,8 +36,9 @@ int main() {
 	printf("%d\n", Min<int>(12, 5));
 	printf("%f\n", Min<float>(0.5f, 1.2f));
 	printf("%lf\n", Min<double>(0.00005, 0.0000012));
-	printf("%c\n", Min("文字１","文字２"));
+	Min<char>(1,2);
 
 
 	return 0;
 }
+
