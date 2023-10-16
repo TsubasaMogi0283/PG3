@@ -3,70 +3,22 @@
 #include <stdlib.h>
 
 #include "Calculation/Calculation.h"
+#include <functional>
 
 
 int main() {
 
-	//関数ポインタ
-	//一言でいうと関数版のポインタ
-	//宣言は変数と同じように関数の前に*をつけて()で括る
-
-	//実行する関数を配列でまとめられて見やすくなるよ！！
-	//ただ中身を入れ替えるとき分かりにくい
-	//ここでtypedefを使う
-	//typedef int (*newType)(int, int);
-
-	//非同期処理の時に凄く便利になるよ
-	//順番を保証できる
-	//単体で使うことはあまりないらしい
-
-	//newType calc;
-
-	//int number1 = 5;
-	//int number2 = 12;
-
-#pragma region 配列版
-
-	//typedef int (*newType[2])(int, int) = {
-	//	Add,
-	//	Subtract,
-	//};
-
-	//ここで中身を入れる
-	//calc = Add;
-	//printf("Add:%d\n", calc(number1,number2));
-	//printf("Addのアドレス:%p\n",*calc);
+	//ラムダ式(無名関数)
+	//宣言・定義が必要ない関数
+	//肥大化しないよのがメリット
+	//[]...ラムダキャプチャ
+	//()...パラメータ定義説節いわゆる「引数」
+	//{}...複合ステートメント。関数定義
+	//()...一番後ろに呼び出し式の()を忘れずに
 	
-	//ここで関数の切り替え
-	//calc = Subtract;
-	//printf("Subtrac:%d\n", calc(number1,number2));
-	//printf("Subtractのアドレス=%p\n",*calc);
-
-	//for (int i = 0; i < 2; i++) {
-	//	printf("計算 : %d\n", calc[i](number1, number2));
-	//	printf("アドレス : %p\n", *calc[i]);
-	//
-	//}
-#pragma endregion
-
-#pragma region typedef版
-	//typedefで&をつけて少し分かりやすくなったよ
-	//calc = &Add;
-	//printf("%d\n", calc(number1, number2));
-	//
-	//calc = &Subtract;
-	//printf("%d\n", calc(number1, number2));
-
-#pragma endregion
-
-#pragma region コールバック関数を使う
-	//PFunc p;
-	//p = DisplayResult;
-	//SetTimeout(p, 3);
-	//ちゃんと待ったね
-#pragma endregion
-
-	
+	//std::function
+	//関数を変数化出来る型。関数ポインタの次世代版
+	//autoと同じだけどできるだけこっちにしよう
 
 	printf("さいころを振って奇数か偶数を当てるゲーム\n\n");
 	printf("奇数だと思うなら1\n");
@@ -77,13 +29,71 @@ int main() {
 	scanf_s("%d",&answer);
 	
 
-	PFunc wait;
-	wait = DisplayResult;
-	//答えがGetDiceNumber
-	SetTimeout(wait,answer);
-
 	
+	//答えがGetDiceNumber
+	//SetTimeout(wait,answer);
 
+
+
+#pragma region ラムダ式とstd::function
+	////この2つは同じ
+	//std::function<int(int)> fx = [](int i) {
+	//	return i + 1;
+	//};
+	//auto fx2 = [](int i) {
+	//	return i + 1;
+	//};
+	//printf("std:%d\n", fx(1));
+	//printf("auto:%d\n", fx(1));
+
+#pragma endregion
+
+
+	//void DisplayResult(int *answer );
+	//std::function<void(int*)> DisplayResult = [](int *answer) {
+	//	//printf("%d秒待って実行されたよ\n", *s);
+	//
+	//	int rndNumber = GetDiceNumber();
+	//
+	//
+	//	printf("さいころの値は%dだよ\n", rndNumber);
+	//	
+	//	if (rndNumber % 2 == 0 && *answer%2==0) {
+	//		printf("正解!!\n");
+	//	}
+	//	else if (rndNumber % 2 == 1 && *answer%2==1) {
+	//		printf("正解!!\n");
+	//	}
+	//	else {
+	//		printf("不正解・・\n");
+	//	}
+	//};
+	//
+	//PFunc wait;
+	//wait = DisplayResult(answer);
+
+	//void SetTimeout(PFunc p,int answer) {
+	//printf("さて答えはなんだろな\n\n");
+	////Sleepは待つ処理
+	////引数はミリ秒だよ
+	//Sleep(3 * 1000);
+	//
+	//
+	//
+	//p(&answer);
+	//}
+
+	//void SetTimeout(PFunc p, int second);
+
+	std::function<void(void)> SetTimeout = []() {
+		printf("さて答えはなんだろな\n\n");
+		//Sleepは待つ処理
+		//引数はミリ秒だよ
+		//Sleep(3 * 1000);
+		
+	};
+
+	SetTimeout;
 
 	return 0;
 }
