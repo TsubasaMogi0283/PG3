@@ -1,6 +1,6 @@
 #include "Recursive.h"
 
-int CalcRecursive(int workingTime) {
+int CalcRecursiveSalary(int workingTime) {
 	int salary = 0;
 	
 	//Å‰‚Í100‰~
@@ -9,7 +9,7 @@ int CalcRecursive(int workingTime) {
 	}
 
 	if (workingTime > 1) {
-		int preSalary = CalcRecursive(workingTime-1);
+		int preSalary = CalcRecursiveSalary(workingTime-1);
 		int currentSalary= (preSalary*2)-50;
 		
 		salary += currentSalary+preSalary;

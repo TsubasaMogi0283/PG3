@@ -1,4 +1,4 @@
 #pragma once
 
-int CalcRecursive(int workingTime);
+int CalcRecursiveSalary(int workingTime);
 
