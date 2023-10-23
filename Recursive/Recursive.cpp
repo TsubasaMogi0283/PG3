@@ -1,19 +1,21 @@
 #include "Recursive.h"
 
-int Recursive(int workingTime) {
-	//if (n <= 1) {
-	//	return 1;
-	//}
-	//return (n * Recursive(n - 1));
-
-
+int CalcRecursive(int workingTime) {
+	int salary = 0;
+	
+	//Å‰‚Í100‰~
 	if (workingTime == 1) {
 		return 100;
 	}
 
 	if (workingTime > 1) {
-		return Recursive(workingTime-1)*2-50;;
+		int preSalary = CalcRecursive(workingTime-1);
+		int currentSalary= (preSalary*2)-50;
+		
+		salary += currentSalary+preSalary;
+		
+
 	}
 	
-	
+	return salary;
 }

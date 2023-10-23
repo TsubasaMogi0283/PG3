@@ -12,22 +12,30 @@ int main() {
 
 #pragma endregion
 
-	int workingHour = 9;
+	int workingHour = 5;
 	int hourlyWage = 1072;
 
-	int normalWorking = 0;
 	
 	printf("%d時間働きます\n\n", workingHour);
 
-	int recursive = Recursive(workingHour);
+
+	int normalSalary = 0;
 	
-	//次は再帰
-	
-	normalWorking = hourlyWage * workingHour;
-	printf("通常だと%d円\n", normalWorking);
-	printf("再帰だと%d円\n", recursive);
+	int recursive = 0;
 
 	
+	//通常
+	normalSalary = hourlyWage * workingHour;
+	
+	//再帰
+	recursive = CalcRecursive(workingHour);
+	
+	
+	
+	printf("通常だと%d円\n", normalSalary);
+	printf("再帰だと%d円\n", recursive);
+
+	workingHour++;
 
 	return 0;
 }
