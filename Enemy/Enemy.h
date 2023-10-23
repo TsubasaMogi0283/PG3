@@ -1,7 +1,20 @@
 #pragma once
+#include <Windows.h>
+
+//typedef void (*PFunc)(void);
 
 class Enemy {
 public:
+	Enemy();
+
+	//初期化
+	void Initialze();
+
+	
+
+	//更新
+	void Update();
+
 	//近接
 	void Proximity();
 
@@ -11,17 +24,15 @@ public:
 	//離脱
 	void Leave();
 
-	//更新
-	void Update();
+
+	~Enemy();
+
+private:
+	
 
 
 private:
-	//メンバ関数ポインタ
-	static void (Enemy::* spFunctable[])();
-
-
-private:
-
+	
 	//enum宣言
 	enum class Phase {
 		Proximity,	//接近
@@ -30,5 +41,8 @@ private:
 	};
 
 	Phase phase_ = Phase();
+
+	//メンバ関数ポインタ
+	static void (Enemy::* spFunctable[])();
 
 };

@@ -9,11 +9,12 @@
 
 int main() {
 
-	//ALのexでやったから問題ないっしょ
-	pFunc = &Enemy::Initialize();
+	Enemy* enemy = new Enemy();
+	enemy->Initialze();
 
+	enemy->Update();
 
-	static
+	delete enemy;
 
 	return 0;
 }
