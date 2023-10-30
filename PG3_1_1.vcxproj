@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Synthesizer/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,16 +141,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Massive.cpp" />
-    <ClCompile Include="Serum.cpp" />
-    <ClCompile Include="Spire.cpp" />
-    <ClCompile Include="Synthesizer.cpp" />
+    <ClCompile Include="Synthesizer\Massive\Massive.cpp" />
+    <ClCompile Include="Synthesizer\Serum\Serum.cpp" />
+    <ClCompile Include="Synthesizer\Spire\Spire.cpp" />
+    <ClCompile Include="Synthesizer\Synthesizer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Massive.h" />
-    <ClInclude Include="Serum.h" />
-    <ClInclude Include="Spire.h" />
-    <ClInclude Include="Synthesizer.h" />
+    <ClInclude Include="Synthesizer\Massive\Massive.h" />
+    <ClInclude Include="Synthesizer\Serum\Serum.h" />
+    <ClInclude Include="Synthesizer\Spire\Spire.h" />
+    <ClInclude Include="Synthesizer\Synthesizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

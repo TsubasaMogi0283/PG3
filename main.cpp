@@ -1,8 +1,9 @@
 ﻿#include <stdio.h>
 #include "Synthesizer.h"
-#include "Massive.h"
-#include "Serum.h"
-#include "Spire.h"
+#include "Synthesizer/Massive/Massive.h"
+#include "Synthesizer/Serum/Serum.h"
+#include "Synthesizer/Spire/Spire.h"
+
 
 
 int main() {
