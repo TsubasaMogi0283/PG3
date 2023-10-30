@@ -2,7 +2,7 @@
 
 //コンストラクタ
 Synthesizer::Synthesizer() {
-
+	name_ = "Synthesizer Name";
 }
 
 //説明関数

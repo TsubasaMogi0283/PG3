@@ -3,12 +3,18 @@
 
 //コンストラクタ
 Massive::Massive() {
-
+	
 }
 
 
+
 void Massive::Explain() {
-	 std::cout << "ああ、数値を出力！"   << "\n";
+	name_ = "Massive";
+	std::cout  <<name_  << "\n";
+
+
+	std::cout << "NativeInstrumentのシンセサイザー"   << "\n";
+	std::cout << "ベース系の音はこれにお任せ！！"   << "\n\n";
 
 }
 

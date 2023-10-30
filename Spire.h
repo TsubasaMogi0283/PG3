@@ -1,23 +1,23 @@
 #pragma once
 #include "Synthesizer.h"
 
-class Massive : public Synthesizer {
-public:
+class Spire: public Synthesizer {
+	public:
 	//コンストラクタ
-	Massive();
+	Spire();
 
 	void Explain() override;
 
 
 
 	//デストラクタ
-	~Massive();
+	~Spire();
 
 
 private:
 
 	const char* name_;
 
-};
 
+};
 

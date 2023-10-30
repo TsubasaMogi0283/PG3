@@ -1,17 +1,18 @@
 #pragma once
 #include "Synthesizer.h"
 
-class Massive : public Synthesizer {
+class Serum: public Synthesizer {
 public:
 	//コンストラクタ
-	Massive();
+	Serum();
 
+	//説明
 	void Explain() override;
 
 
 
 	//デストラクタ
-	~Massive();
+	~Serum();
 
 
 private:
@@ -19,5 +20,4 @@ private:
 	const char* name_;
 
 };
-
 
