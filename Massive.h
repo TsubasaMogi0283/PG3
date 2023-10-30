@@ -6,6 +6,7 @@ public:
 	//コンストラクタ
 	Massive();
 
+	//説明
 	void Explain() override;
 
 

@@ -15,7 +15,7 @@ void Spire::Explain() {
 
 	std::cout << "RevealSoundのシンセサイザー"   << "\n";
 	std::cout << "矢印に従えば良い音が作れる"   << "\n";
-	std::cout << "バラエティ豊富な音色が特徴"   << "\n";
+	std::cout << "バラエティ豊富な音色が特徴"   << "\n\n";
 
 
 }
