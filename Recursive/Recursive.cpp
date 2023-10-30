@@ -1,9 +1,9 @@
-#include "Recursive.h"
+ï»¿#include "Recursive.h"
 
 int CalcRecursiveSalary(int workingTime) {
 	int salary = 0;
 	
-	//Å‰‚Í100‰~
+	//æœ€åˆã¯100å††
 	if (workingTime == 1) {
 		return 100;
 	}
