@@ -5,7 +5,7 @@ template <typename Type>
 
 class Template{
 public:
-	Type hieght;
+	Type height;
 	Type width;
 
 
@@ -14,7 +14,7 @@ public:
 	}
 
 	Type Size() {
-		return hieght * width;
+		return height * width;
 	}
 
 
