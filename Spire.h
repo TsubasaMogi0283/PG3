@@ -6,6 +6,8 @@ class Spire: public Synthesizer {
 	//コンストラクタ
 	Spire();
 
+
+	//説明
 	void Explain() override;
 
 
