@@ -16,7 +16,7 @@ public:
 	void Update();
 
 	//‹ßÚ
-	void Proximity();
+	void Approach();
 
 	//ËŒ‚
 	void Attack();
@@ -35,7 +35,7 @@ private:
 	
 	//enuméŒ¾
 	enum class Phase {
-		Proximity,	//Ú‹ß
+		Approach,	//Ú‹ß
 		Attack,		//ËŒ‚
 		Leave,		//—£’E
 	};
