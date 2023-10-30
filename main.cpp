@@ -28,12 +28,12 @@ int main() {
 	
 
 	
-	for (int i = 1; i < 6; i++) {
+	for (int i = 1; i < 10; i++) {
 		//通常
 		normalSalary = hourlyWage * workingHour;
 		
 		//再帰
-		recursive = CalcRecursiveSalary(workingHour);
+		recursive = CalcRecursiveSalary(100,workingHour);
 
 		printf("%d時間", i);
 		printf("通常だと%d円\n", normalSalary);
@@ -45,11 +45,12 @@ int main() {
 		}
 		if (recursive > normalSalary) {
 			printf("再帰的な賃金が超えました\n");
+			break;
 		}
 	}
 
 
-	printf("よって5時間である\n");
+	printf("よって8時間である\n");
 	
 	
 
