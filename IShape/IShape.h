@@ -9,6 +9,11 @@ public:
 	virtual void Draw()=0;
 
 
+	virtual ~IShape() = 0;
+
+protected:
+	//–ÊÏ‚Í‹¤’Ê‚·‚é‚æ‚Ë
+	float area_ = 0;
 
 
 
