@@ -17,6 +17,7 @@ void Rectangle::Size() {
 
 void Rectangle::Draw() {
 	//•\Ž¦
+	std::cout<< "Rectangle" << std::endl;
 	std::cout<< area_ << std::endl;
 }
 
