@@ -19,7 +19,7 @@ void Circle::Size() {
 
 void Circle::Draw() {
 	std::cout<< "Circle" << std::endl;
-	std::cout<< area_ << std::endl;
+	std::cout<< area_ << std::endl<< std::endl;
 
 }
 
