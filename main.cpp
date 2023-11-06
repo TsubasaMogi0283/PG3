@@ -2,7 +2,7 @@
 
 int main() {
 
-	printf("あ");
+	printf("文字列表示");
 
 
 
