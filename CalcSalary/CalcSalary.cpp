@@ -1,4 +1,4 @@
-﻿#include "Recursive.h"
+﻿#include "CalcSalary.h"
 
 int CalcRecursiveSalary(int firstSalary,int workingTime) {
 	

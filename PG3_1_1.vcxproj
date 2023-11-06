@@ -130,6 +130,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalUsingDirectories>$(ProjectDir)\CalcSalary;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,11 +140,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CalcSalary\CalcSalary.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Recursive\Recursive.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Recursive\Recursive.h" />
+    <ClInclude Include="CalcSalary\CalcSalary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

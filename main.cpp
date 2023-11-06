@@ -1,5 +1,5 @@
 ﻿#include <stdio.h>
-#include "Recursive/Recursive.h"
+#include "CalcSalary/CalcSalary.h"
 
 int main() {
 
@@ -12,7 +12,7 @@ int main() {
 
 #pragma endregion
 
-	int workingHour = 1;
+	int workingTime = 1;
 	int hourlyWage = 1072;
 
 	
@@ -21,7 +21,7 @@ int main() {
 
 	int normalSalary = 0;
 	
-	int recursive = 0;
+	int recursiveSalary = 0;
 
 	
 	
@@ -30,20 +30,20 @@ int main() {
 	
 	for (int i = 1; i < 10; i++) {
 		//通常
-		normalSalary = hourlyWage * workingHour;
+		normalSalary = hourlyWage * workingTime;
 		
 		//再帰
-		recursive = CalcRecursiveSalary(100,workingHour);
+		recursiveSalary = CalcRecursiveSalary(100,workingTime);
 
 		printf("%d時間", i);
 		printf("通常だと%d円\n", normalSalary);
-		printf("再帰だと%d円\n\n", recursive);
+		printf("再帰だと%d円\n\n", recursiveSalary);
 
-		if (recursive < normalSalary) {
+		if (recursiveSalary < normalSalary) {
 			
-			workingHour++;
+			workingTime++;
 		}
-		if (recursive > normalSalary) {
+		if (recursiveSalary > normalSalary) {
 			printf("再帰的な賃金が超えました\n");
 			break;
 		}
