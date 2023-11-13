@@ -1,18 +1,18 @@
 #pragma once
 
-template <typename Type>
+template <typename Type1,typename Type2>
 
 class Calc{
 
 public:
-	//()‚Ì’†g‚Íˆø”
-	Calc(Type n1, Type n2) :number1(n1), number2(n2) {
+	//()ã®ä¸­èº«ã¯å¼•æ•°
+	Calc(Type1 n1, Type2 n2) :number1(n1), number2(n2) {
 
 	}
 
 
-	//¬‚³‚¢‚Ù‚¤‚ğ•Ô‚·
-	Type Min() {
+	//å°ã•ã„ã»ã†ã‚’è¿”ã™
+	Type1 Min() {
 		if (number1 < number2) {
 			return number1;
 		}
@@ -24,8 +24,8 @@ public:
 
 private:
 
-	Type number1;
-	Type number2;
+	Type1 number1;
+	Type2 number2;
 
 
 

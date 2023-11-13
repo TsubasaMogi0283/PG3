@@ -16,24 +16,25 @@ int main() {
 
 	//本編はここから
 
-	Calc<int >comperInt1(10, 20);
-	Calc<int >comperInt2(20, 15);
-
-	Calc<float>comperFloat1(5.0f, 12.0f);
-	Calc<float>comperFloat2(20.0f, 57.0f);
+	//ダブり厳禁
+	Calc<int, int>comperVal1(10, 20);
+	Calc<int, float>comperVal2(20, 15.0f);
+	Calc<int, double>comperVal3(25, 57.0);
 	
-	Calc<double>comperDouble1(3.9, 0.5);
-	Calc<double>comperDouble2(0.7, 1.2);
+	Calc<float, float>comperVal4(20.0f, 15.0f);
+	Calc<float, double>comperVal5(20.0f, 57.0);
+	
+	Calc<double, double>comperVal6(25.0, 63.0);
+	
 
+	printf("int型とint型で比較: %d\n", comperVal1.Min());
+	printf("int型とfloat型で比較: %d\n", comperVal2.Min());
+	printf("int型とdouble型で比較: %d\n", comperVal3.Min());
 
-	printf("int型で比較: %d\n", comperInt1.Min());
-	printf("int型で比較: %d\n", comperInt2.Min());
+	printf("float型とfloat型で比較: %f\n", comperVal4.Min());
+	printf("float型とdouble型で比較: %f\n", comperVal5.Min());
 
-	printf("float型で比較: %f\n", comperFloat1.Min());
-	printf("float型で比較: %f\n", comperFloat2.Min());
-
-	printf("doubleがたで比較: %f\n", comperDouble1.Min());
-	printf("doubleがたで比較: %f\n", comperDouble2.Min());
+	printf("double型とdouble型で比較: %f\n", comperVal6.Min());
 
 	return 0;
 }
