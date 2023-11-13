@@ -1,4 +1,4 @@
-#include "Enemy.h"
+ï»¿#include "Enemy.h"
 #include <stdio.h>
 
 
@@ -10,9 +10,9 @@ void Enemy::Initialze() {
 	phase_ = Phase::Approach;
 }
 
-//ƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^
+//ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 void (Enemy::* Enemy::spFunctable[])() = {
-	//‚»‚ê‚¼‚ê‚ÌŠÖ”
+	//ãã‚Œãã‚Œã®é–¢æ•°
 	&Enemy::Approach,
 	&Enemy::Attack,
 	&Enemy::Leave,
@@ -20,33 +20,33 @@ void (Enemy::* Enemy::spFunctable[])() = {
 
 };
 
-//‹ßÚ
+//è¿‘æ¥
 void Enemy::Approach() {
-	printf("‹ßÚ\n");
+	printf("è¿‘æ¥\n");
 	//Sleep(3 * 1000);
 	phase_ = Phase::Attack;
 }
 
-//ËŒ‚
+//å°„æ’ƒ
 void Enemy::Attack() {
-	printf("ËŒ‚\n");
+	printf("å°„æ’ƒ\n");
 	//Sleep(3 * 1000);
 	phase_ = Phase::Leave;
 
 }
 
-//—£’E
+//é›¢è„±
 void Enemy::Leave() {
-	printf("—£’E\n");
+	printf("é›¢è„±\n");
 }
 
-//XV
+//æ›´æ–°
 void Enemy::Update() {
-	//ƒ‹[ƒv‚µ‚È‚¢‚©‚ç‹C‚ğ•t‚¯‚Ä
-	//for•¶‚¶‚á‚È‚¢‚ÆƒLƒcƒC‚Á‚·
+	//ãƒ«ãƒ¼ãƒ—ã—ãªã„ã‹ã‚‰æ°—ã‚’ä»˜ã‘ã¦
+	//foræ–‡ã˜ã‚ƒãªã„ã¨ã‚­ãƒ„ã‚¤ã£ã™
 
-	//Œ»İƒtƒF[ƒY‚ÌŠÖ”‚ğÀs
-	//ƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^‚É“ü‚Á‚Ä‚¢‚éŠÖ”‚ğŒÄ‚Ño‚·
+	//ç¾åœ¨ãƒ•ã‚§ãƒ¼ã‚ºã®é–¢æ•°ã‚’å®Ÿè¡Œ
+	//ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿ã«å…¥ã£ã¦ã„ã‚‹é–¢æ•°ã‚’å‘¼ã³å‡ºã™
 	for (int i = 0; i < 3; i++) {
 		(this->*spFunctable[static_cast<size_t>(phase_)])();
 	}

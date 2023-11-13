@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <Windows.h>
 
 //typedef void (*PFunc)(void);
@@ -7,21 +7,21 @@ class Enemy {
 public:
 	Enemy();
 
-	//‰Šú‰»
+	//åˆæœŸåŒ–
 	void Initialze();
 
 	
 
-	//XV
+	//æ›´æ–°
 	void Update();
 
-	//‹ßÚ
+	//è¿‘æ¥
 	void Approach();
 
-	//ËŒ‚
+	//å°„æ’ƒ
 	void Attack();
 
-	//—£’E
+	//é›¢è„±
 	void Leave();
 
 
@@ -33,16 +33,16 @@ private:
 
 private:
 	
-	//enuméŒ¾
+	//enumå®£è¨€
 	enum class Phase {
-		Approach,	//Ú‹ß
-		Attack,		//ËŒ‚
-		Leave,		//—£’E
+		Approach,	//æ¥è¿‘
+		Attack,		//å°„æ’ƒ
+		Leave,		//é›¢è„±
 	};
 
 	Phase phase_ = Phase();
 
-	//ƒƒ“ƒoŠÖ”ƒ|ƒCƒ“ƒ^
+	//ãƒ¡ãƒ³ãƒé–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 	static void (Enemy::* spFunctable[])();
 
 };
