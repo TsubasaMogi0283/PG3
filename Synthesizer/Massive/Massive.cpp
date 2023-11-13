@@ -1,7 +1,7 @@
 #include "Massive.h"
 #include <iostream>
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Massive::Massive() {
 	
 }
@@ -13,14 +13,14 @@ void Massive::Explain() {
 	std::cout  <<name_  << "\n";
 
 
-	std::cout << "NativeInstrument‚ÌƒVƒ“ƒZƒTƒCƒU["   << "\n";
-	std::cout << "ƒx[ƒXŒn‚Ì‰¹‚Í‚±‚ê‚É‚¨”C‚¹II"   << "\n\n";
+	std::cout << "NativeInstrumentã®ã‚·ãƒ³ã‚»ã‚µã‚¤ã‚¶ãƒ¼"   << "\n";
+	std::cout << "ãƒ™ãƒ¼ã‚¹ç³»ã®éŸ³ã¯ã“ã‚Œã«ãŠä»»ã›ï¼ï¼"   << "\n\n";
 
 }
 
 
 
-//ƒfƒXƒgƒ‰ƒNƒ^
+//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Massive::~Massive() {
 
 }

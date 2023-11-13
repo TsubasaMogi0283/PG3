@@ -3,16 +3,16 @@
 
 class Spire: public Synthesizer {
 	public:
-	//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	Spire();
 
 
-	//à–¾
+	//èª¬æ˜
 	void Explain() override;
 
 
 
-	//ƒfƒXƒgƒ‰ƒNƒ^
+	//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 	~Spire();
 
 

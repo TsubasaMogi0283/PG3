@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include "Synthesizer.h"
 #include "Synthesizer/Massive/Massive.h"
 #include "Synthesizer/Serum/Serum.h"

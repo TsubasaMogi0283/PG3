@@ -1,28 +1,28 @@
 #include "Spire.h"
 #include <iostream>
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Spire::Spire() {
 
 }
 
 
-//à–¾
+//èª¬æ˜
 void Spire::Explain() {
 	name_ = "Spire";
 	std::cout  <<name_  << "\n";
 	
 
-	std::cout << "RevealSound‚ÌƒVƒ“ƒZƒTƒCƒU["   << "\n";
-	std::cout << "–îˆó‚É]‚¦‚Î—Ç‚¢‰¹‚ªì‚ê‚é"   << "\n";
-	std::cout << "ƒoƒ‰ƒGƒeƒB–L•x‚È‰¹F‚ª“Á’¥"   << "\n\n";
+	std::cout << "RevealSoundã®ã‚·ãƒ³ã‚»ã‚µã‚¤ã‚¶ãƒ¼"   << "\n";
+	std::cout << "çŸ¢å°ã«å¾“ãˆã°è‰¯ã„éŸ³ãŒä½œã‚Œã‚‹"   << "\n";
+	std::cout << "ãƒãƒ©ã‚¨ãƒ†ã‚£è±Šå¯ŒãªéŸ³è‰²ãŒç‰¹å¾´"   << "\n\n";
 
 
 }
 
 
 
-//ƒfƒXƒgƒ‰ƒNƒ^
+//ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 Spire::~Spire() {
 
 }
