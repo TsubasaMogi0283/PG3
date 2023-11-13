@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 class IShape{
 public:
 
-	//ƒˆ‰¼‘zŠÖ”
+	//ç´”ç²‹ä»®æƒ³é–¢æ•°
 	virtual void Size()=0;
 
 
@@ -12,7 +12,7 @@ public:
 	virtual ~IShape() = 0;
 
 protected:
-	//–ÊÏ‚Í‹¤’Ê‚·‚é‚æ‚Ë
+	//é¢ç©ã¯å…±é€šã™ã‚‹ã‚ˆã­
 	float area_ = 0;
 
 

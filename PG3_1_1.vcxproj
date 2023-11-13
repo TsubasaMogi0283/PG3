@@ -141,15 +141,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="IShape\Circle\Circle.cpp" />
+    <ClCompile Include="Circle\Circle.cpp" />
     <ClCompile Include="IShape\IShape.cpp" />
-    <ClCompile Include="IShape\Rectangle\Rectangle.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rectangle\Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IShape\Circle\Circle.h" />
+    <ClInclude Include="Circle\Circle.h" />
     <ClInclude Include="IShape\IShape.h" />
-    <ClInclude Include="IShape\Rectangle\Rectangle.h" />
+    <ClInclude Include="Rectangle\Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

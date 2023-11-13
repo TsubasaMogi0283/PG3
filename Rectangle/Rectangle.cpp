@@ -1,10 +1,10 @@
-#include "Rectangle.h"
+ï»¿#include "Rectangle.h"
 #include <iostream>
 
 
 Rectangle::Rectangle(float height,float width) {
 
-	//ˆø”‚ğƒƒ“ƒo•Ï”‚É“ü‚ê‚æ‚¤
+	//å¼•æ•°ã‚’ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å…¥ã‚Œã‚ˆã†
 	height_ = height;
 	width_ = width;
 
@@ -16,7 +16,7 @@ void Rectangle::Size() {
 
 
 void Rectangle::Draw() {
-	//•\¦
+	//è¡¨ç¤º
 	std::cout<< "Rectangle" << std::endl;
 	std::cout<< area_ << std::endl << std::endl;
 }

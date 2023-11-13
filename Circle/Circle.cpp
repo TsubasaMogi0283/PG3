@@ -1,4 +1,4 @@
-#include "Circle.h"
+ï»¿#include "Circle.h"
 #include <iostream>
 
 #define _USE_MATH_DEFINES
@@ -6,7 +6,7 @@
 
 
 Circle::Circle(float radius) {
-	//ˆø”‚ğƒƒ“ƒo•Ï”‚É“ü‚ê‚æ‚¤
+	//å¼•æ•°ã‚’ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å…¥ã‚Œã‚ˆã†
 	radius_ = radius;
 
 }
