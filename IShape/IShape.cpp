@@ -1,4 +1,4 @@
-﻿#include "IShape.h"
+#include "IShape.h"
 
 void IShape::Size() {
 
