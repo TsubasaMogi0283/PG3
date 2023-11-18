@@ -54,7 +54,7 @@ int main() {
 	//PFunc wait;
 	//wait = DisplayResult(answer);
 
-
+	//条件5はこれ
 	std::function<void()> SetTimeout = []() {
 		printf("さて答えはなんだろな\n\n");
 		//Sleepは待つ処理
@@ -63,11 +63,13 @@ int main() {
 		//p(&answer);
 	};
 
-
+	//SetTimeout関数をここで使う
 	SetTimeout();
 
-	//void DisplayResult(int *answer );
-	std::function<void(int)> DisplayResult = [](int answer) {
+
+	//結果を見せる
+	//キャプチャはイコールにした
+	std::function<void(int)> DisplayResult = [=](int answer) {
 		//printf("%d秒待って実行されたよ\n", *s);
 	
 		int rndNumber = GetDiceNumber();
