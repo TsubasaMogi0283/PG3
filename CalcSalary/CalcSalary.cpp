@@ -1,19 +1,18 @@
 ﻿#include "CalcSalary.h"
 
+//通常
+int CalcNormalSalary(int baseSalary, int workingTime) {
+	return baseSalary * workingTime;
+}
+
+//階乗
 int CalcRecursiveSalary(int firstSalary,int workingTime) {
 	
-
-	//最初は100円
-	if (workingTime == 1) {
+	if (workingTime <= 1) {
 		return firstSalary;
 	}
 
-	if (workingTime > 1) {
-		
-		return firstSalary+CalcRecursiveSalary(firstSalary*2-50,workingTime-1);
-		
 
-	}
-	
+	return firstSalary+CalcRecursiveSalary(firstSalary*2-50,workingTime-1);
 	
 }
