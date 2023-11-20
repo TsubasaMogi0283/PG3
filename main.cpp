@@ -55,7 +55,8 @@ int main() {
 	//wait = DisplayResult(answer);
 
 	//条件5はこれ
-	std::function<void()> SetTimeout = []() {
+	//SetTimeoutはメンバポインタにするらしい
+	std::function<void()> SetTimeout = [=]() {
 		printf("さて答えはなんだろな\n\n");
 		//Sleepは待つ処理
 		//引数はミリ秒だよ
