@@ -15,7 +15,7 @@ typedef void (*PFunc)(int);
 
 //コールバック関数
 //他の関数に引数として渡す関数のこと
-void DisplayResult(int answer );
+void JudgeResult(int rollResult,int answer );
 
 int SetTimeout(std::function<int()> collback, int second);
 

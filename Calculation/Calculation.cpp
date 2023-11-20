@@ -9,30 +9,31 @@ int Subtract(int a, int b) {
 }
 
 //コールバック関数
-void DisplayResult(int answer ) {
+void JudgeResult(int rollResult,int answer ) {
 	//printf("%d秒待って実行されたよ\n", *s);
 	
-	int rndNumber = GetDiceNumber();
-
-
-	printf("さいころの値は%dだよ\n", rndNumber);
 	
-	if (rndNumber % 2 == 0 &&answer%2==0) {
-		printf("正解!!\n");
+
+	if (rollResult % 2 == 0 && answer %2==0) {
+		printf("正解\n");
 	}
-	else if (rndNumber % 2 == 1 &&answer%2==1) {
-		printf("正解!!\n");
+	if (rollResult % 2 == 1 && answer%2== 1) {
+		printf("正解\n");
 	}
-	else {
-		printf("不正解・・\n");
+	if (rollResult % 2 == 1 && answer%2== 0){
+		printf("不正解\n");
 	}
+	if (rollResult % 2 == 0 && answer%2== 1){
+		printf("不正解\n");
+	}
+	
 }
 
 int SetTimeout(std::function<int()> callback,int answer) {
-	printf("さて答えはなんだろな\n\n");
+	printf("さて答えはなんだろな\n");
 	//Sleepは待つ処理
 	//引数はミリ秒だよ
-	Sleep(3 * 1000);
+	Sleep(answer * 1000);
 
 	
 	return callback();

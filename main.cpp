@@ -26,18 +26,26 @@ int main() {
 
 
 	int rollResult;
-	//int answer;
+	int answer = 0;
+	scanf_s("%d",&answer);
+	
 	
 	//さいころをふる
-	std::function<int()> GetDiceNumber = [](){
-		std::random_device rnd;
-		return rnd() % 6 + 1;
+	std::function<int()> DiseRoll = []() {
+		int rndNumber = GetDiceNumber();
+
+
+		printf("さいころの値は%dだよ\n", rndNumber);
+		return rndNumber;
+		
 	};
+	printf("%dだね\n", answer);
+	rollResult = SetTimeout(DiseRoll, 3);
+	JudgeResult(rollResult,answer);
+
 	
 
-	rollResult = SetTimeout(GetDiceNumber, 3);
-	printf("Answe: %d\n", rollResult);
-	DisplayResult(rollResult);
+	
 
 	return 0;
 }
