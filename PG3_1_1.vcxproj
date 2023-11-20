@@ -141,11 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Calculation\Calculation.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SetTimeout\SetTimeout.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculation\Calculation.h" />
-    <ClInclude Include="SetTimeout\SetTimeout.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

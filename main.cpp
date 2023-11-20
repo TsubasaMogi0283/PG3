@@ -25,71 +25,19 @@ int main() {
 	printf("偶数だと思うなら2を押してね\n");
 
 
-	int answer = 0;
-	scanf_s("%d",&answer);
+	int rollResult;
+	//int answer;
 	
-
-	
-	//答えがGetDiceNumber
-	//SetTimeout(wait,answer);
-
-
-
-#pragma region ラムダ式とstd::function
-	////この2つは同じ
-	//std::function<int(int)> fx = [](int i) {
-	//	return i + 1;
-	//};
-	//auto fx2 = [](int i) {
-	//	return i + 1;
-	//};
-	//printf("std:%d\n", fx(1));
-	//printf("auto:%d\n", fx(1));
-
-#pragma endregion
-
-
-	
-	//
-	//PFunc wait;
-	//wait = DisplayResult(answer);
-
-	//条件5はこれ
-	//SetTimeoutはメンバポインタにするらしい
-	std::function<void()> SetTimeout = [=]() {
-		printf("さて答えはなんだろな\n\n");
-		//Sleepは待つ処理
-		//引数はミリ秒だよ
-		Sleep(3 * 1000);
-		//p(&answer);
+	//さいころをふる
+	std::function<int()> GetDiceNumber = [](){
+		std::random_device rnd;
+		return rnd() % 6 + 1;
 	};
-
-	//SetTimeout関数をここで使う
-	SetTimeout();
-
-
-	//結果を見せる
-	//キャプチャはイコールにした
-	std::function<void(int)> DisplayResult = [=](int answer) {
-		//printf("%d秒待って実行されたよ\n", *s);
 	
-		int rndNumber = GetDiceNumber();
-	
-	
-		printf("さいころの値は%dだよ\n", rndNumber);
-		
-		if (rndNumber % 2 == 0 && answer%2==0) {
-			printf("正解!!\n");
-		}
-		else if (rndNumber % 2 == 1 && answer%2==1) {
-			printf("正解!!\n");
-		}
-		else {
-			printf("不正解・・\n");
-		}
-	};
 
-	DisplayResult(answer);
+	rollResult = SetTimeout(GetDiceNumber, 3);
+	printf("Answe: %d\n", rollResult);
+	DisplayResult(rollResult);
 
 	return 0;
 }
