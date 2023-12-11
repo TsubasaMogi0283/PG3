@@ -29,3 +29,7 @@
 2.神田
 1.東京
 
+
+"Tokyo","Kanda","Akihabara","Okachimachi","Ueno","Uguisudani","Nippori","Nishi-Nipporo","Tabata","Komagome",
+"Sugamo","Otsuka","Ikebukuro","Mejiro","Takadanobaba","Shin-Okubo","Shinjuku","Yoyogi","Harajuku","Shibuya",
+"Ebisu","Meguro","Gotanda","Osaki","Shinagawa","Takanawa GateWay","Tamachi","Hamamatsucho","Shimbashi","Yurakucyo"
