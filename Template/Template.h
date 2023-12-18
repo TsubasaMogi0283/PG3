@@ -6,22 +6,21 @@
 template<typename Type>
 class Template{
 public:
-	Type Template(Type a, Type b) :a(a), b(b) {
-	}
+	
+
+	//ƒƒ“ƒo•Ï”(ˆø”)
+	Template(Type a, Type b) :a_(a), b_(b) {};
 
 	Type Add() {
-		return static_cast<Type>(a + b);
+		return static_cast<Type>(a_ + b_);
 	}
 
-
-
-	
 public:
-	Type a;
-	Type b;
 
-
+	Type a_;
+	Type b_;
 
 
 };
+
 
