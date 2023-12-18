@@ -42,5 +42,10 @@ int main() {
 	printf("%d\n", fxFunctional2(2));
 
 
+
+
+
+
+
 	return 0;
 }
