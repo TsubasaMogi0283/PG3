@@ -1,32 +1,25 @@
 #include <stdio.h>
-#include "Synthesizer.h"
-#include "Synthesizer/Massive/Massive.h"
-#include "Synthesizer/Serum/Serum.h"
-#include "Synthesizer/Spire/Spire.h"
 
-
+#include "Composer/Composer.h"
+#include "Composer/t+pazolite/t_pazolite.h"
+#include "Composer/RiraN/RiraN.h"
 
 int main() {
+	static const int PERSON = 2;
+	Composer* composer[PERSON] = { nullptr };
 
-	//コンストラクタ
-	const int synthesizerNumber = 3;
-	Synthesizer* synthesizer[synthesizerNumber];
-
-	synthesizer[0] = new Massive;
-	synthesizer[1] = new Serum;
-	synthesizer[2] = new Spire;
-
-
-	//説明
-	for (int i = 0; i < 3; i++) {
-		synthesizer[i]->Explain();
-	}
+	composer[0] = new t_pazolite();
+	composer[1] = new RiraN();
 	
-	//デストラクタ
-	for (int i = 0; i < synthesizerNumber; i++) {
-		delete synthesizer[i];
 
+	for (int i = 0; i < PERSON; i++) {
+		composer[i]->Introduce();
 	}
-	
+
+
+	for (int i = 0; i < PERSON; i++) {
+		delete composer[i];
+	}
+
 	return 0;
 }
