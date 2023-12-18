@@ -5,33 +5,22 @@
 
 
 int main() {
-	const int SHAPE_NUMBER = 2;
-	IShape* shape[SHAPE_NUMBER] = { nullptr };
+	static const int AMOUNT = 2;
+	IShape* rectangle[AMOUNT] = { nullptr };
 
-	float radius = 2.0f;
-	float height = 10;
-	float width = 10;
+	rectangle[0] = new Circle(3.0f);
+	rectangle[1] = new Rectangle(10.0f,20.0f);
 
-
-	shape[0] = new Circle(radius);
-	shape[1] = new Rectangle(height,width);
-
-	for (int i = 0; i < SHAPE_NUMBER; i++) {
-		shape[i]->Size();
-
+	for (int i = 0; i < AMOUNT; i++) {
+		rectangle[i]->Size();
 	}
 
-
-	for (int i = 0; i < SHAPE_NUMBER; i++) {
-		shape[i]->Draw();
-
+	for (int i = 0; i < AMOUNT; i++) {
+		rectangle[i]->Draw();
 	}
 
-
-
-	for (int i = 0; i < SHAPE_NUMBER; i++) {
-		delete shape[i];
-
+	for (int i = 0; i < AMOUNT; i++) {
+		delete rectangle[i];
 	}
 
 	return 0;
