@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <stdlib.h>
 
-#include "Calculation/Calculation.h"
 #include <functional>
 
 
@@ -19,33 +18,29 @@ int main() {
 	//std::function
 	//関数を変数化出来る型。関数ポインタの次世代版
 	//autoと同じだけどできるだけこっちにしよう
-
-	printf("さいころを振って奇数か偶数を当てるゲーム\n\n");
-	printf("奇数だと思うなら1\n");
-	printf("偶数だと思うなら2を押してね\n");
+	int num = 10;
 
 
-	int rollResult;
-	int answer = 0;
-	scanf_s("%d",&answer);
-	
-	
-	//さいころをふる
-	std::function<int()> DiseRoll = []() {
-		int rndNumber = GetDiceNumber();
-
-
-		printf("さいころの値は%dだよ\n", rndNumber);
-		return rndNumber;
-		
+	//キャプチャでラムダ式の外にある変数を内部に取り込むことが出来る
+	auto fx = [=](int i) {
+		return num + i;
 	};
-	printf("%dだね\n", answer);
-	rollResult = SetTimeout(DiseRoll, 3);
-	JudgeResult(rollResult,answer);
-
 	
-
+	//std::function...関数を変数にさせるもの。autoみたいなやつ
+	//autoよりstd::functionで作った方が良いらしい
+	std::function<int(int)> fxFunctional = [](int i) {
+		return i + 1; 
+	};
 	
+	auto fxFunctional2 = [](int i) {
+		return i + 1; 
+	};
+
+	printf("%d\n\n", fx(2));
+
+	printf("%d\n", fxFunctional(2));
+	printf("%d\n", fxFunctional2(2));
+
 
 	return 0;
 }
