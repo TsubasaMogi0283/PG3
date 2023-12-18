@@ -1,5 +1,6 @@
-//関数ポインタはその名前の通り関数を代入出来るポインタ
+﻿//関数ポインタはその名前の通り関数を代入出来るポインタ
 //ポインタなので動的
+#include <stdio.h>
 
 class Enemy {
 public:
@@ -20,7 +21,12 @@ public:
 
 private:
 
+	//関数ポインタ
 	void (Enemy::* pFunc)();
+
+	//テーブル
+	//インスタンスごとに変えるものではないためstaticにしているよ
+	static void(Enemy::* pFucTable[])();
 
 };
 

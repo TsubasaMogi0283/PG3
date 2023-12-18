@@ -10,7 +10,7 @@
 int main() {
 
 	Enemy* enemy = new Enemy();
-	enemy->Initialze();
+	enemy->Initialize();
 
 	enemy->Update();
 
