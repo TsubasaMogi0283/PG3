@@ -1,6 +1,6 @@
 #include "DisplayText.h"
 #include <iostream>
 
-void DisplayText(const char* name) {
-	std::cout << *name << "\n";
+void DisplayText(std::string name) {
+	std::cout << name << std::endl;
 }

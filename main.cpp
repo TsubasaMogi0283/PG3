@@ -1,7 +1,8 @@
-﻿#include <stdio.h>
+﻿
 #include <thread>
 #include "Calculation/Calculation.h"
 #include "DisplayText/DisplayText.h"
+#include <vector>
 
 //int Add(int a, int b) {
 //	return a + b;
@@ -47,8 +48,10 @@ int main() {
 
 #pragma endregion
 
-	const char* threadName[3] = { "thread1","thread2","thread3" };
-	
+
+#pragma region 確認課題
+	std::vector<std::string> threadName{ "thread 1","thread 2","thread 3" };
+
 	//1つ目
 	std::thread th1(DisplayText, threadName[0]);
 	th1.join();
@@ -60,6 +63,8 @@ int main() {
 	//3つ目
 	std::thread th3(DisplayText, threadName[2]);
 	th3.join();
+
+#pragma endregion
 
 	return 0;
 }

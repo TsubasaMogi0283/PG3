@@ -1,3 +1,4 @@
 #pragma once
+#include <string>
 
-void DisplayText(const char* name);
+void DisplayText(std::string name);
