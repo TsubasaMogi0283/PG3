@@ -6,5 +6,5 @@ int Subtract(int a, int b);
 
 int Multiply(int a, int b);
 
-int Division(int a, int 2);
+int Division(int a, int b);
 

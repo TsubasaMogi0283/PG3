@@ -1,7 +1,10 @@
 #include "Calculation.h"
+#include <iostream>
 
 int Add(int a, int b) {
-	return a + b;
+	int result = a + b;
+	std::cout << result<<"\n";
+	return result;
 }
 
 int Subtract(int a, int b) {
