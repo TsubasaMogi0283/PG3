@@ -37,8 +37,10 @@ int main() {
 
 	
 	//10万文字の初期化の宣言はこうやってやるよ！
-	std::string a(100000, 'a');
-	
+	const int TEXT_AMOUNT = 100000;
+	std::string a(TEXT_AMOUNT, 'a');
+	std::cout << TEXT_AMOUNT << "文字コピーと移動を比較したよ\n";
+
 #pragma region コピーの場合
 	std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
 	std::string a2 = a;
@@ -60,7 +62,7 @@ int main() {
 	auto result2 = std::chrono::duration_cast<std::chrono::microseconds>(end2 - now2).count();
 
 	std::cout << "移動の場合" << "\n";
-	std::cout << result2 << "\n";
+	std::cout << result2 << " \n";
 
 #pragma endregion
 
