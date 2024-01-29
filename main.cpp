@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <string>
 #include <chrono>
 #include <iostream>
@@ -35,17 +35,17 @@ int main() {
 #pragma endregion
 
 
-	auto now = std::chrono::steady_clock::now();
+	std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
 	//10万文字の初期化の宣言はこうやってやるよ！
 	std::string a(100000, 'a');
 	
 	std::string a2 = a;
 	//現在の時間
-	auto end = std::chrono::steady_clock::now();
+	std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
 
-	auto result= std::chrono::duration_cast<std::chrono::milliseconds>(end - now).count();
+	auto result= std::chrono::duration_cast<std::chrono::microseconds>(end - now).count();
 
-	std::cout<< "result";
+	std::cout<< result<<"\n";
 	
 
 	return 0;
