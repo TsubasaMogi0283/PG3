@@ -1,7 +1,11 @@
-#include <stdio.h>
+﻿#include <stdio.h>
+#include <string>
+#include <chrono>
+#include <iostream>
 
 int main() {
 
+#pragma region Explanation
 	//左辺値 = 右辺値
 	int i = 1;
 	
@@ -28,7 +32,21 @@ int main() {
 
 	//std::move()で右辺値から左辺値にキャスト出来るよ
 
+#pragma endregion
 
+
+	auto now = std::chrono::steady_clock::now();
+	//10万文字の初期化の宣言はこうやってやるよ！
+	std::string a(100000, 'a');
+	
+	std::string a2 = a;
+	//現在の時間
+	auto end = std::chrono::steady_clock::now();
+
+	auto result= std::chrono::duration_cast<std::chrono::milliseconds>(end - now).count();
+
+	std::cout<< "result";
+	
 
 	return 0;
 }
